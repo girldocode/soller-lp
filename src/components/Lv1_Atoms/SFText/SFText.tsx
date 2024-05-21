@@ -14,6 +14,25 @@ import {
   TextWeight,
 } from "./@types";
 
+/**
+ * Renders a styled text component with various customizable properties.
+ *
+ * @param {React.ReactNode} children - The content to be rendered inside the component.
+ * @param {keyof JSX.IntrinsicElements} as - The HTML tag to be used for the component. Defaults to 'p'.
+ * @param {TextSize} size - The size of the text. Defaults to 'base'.
+ * @param {TextLeading} leading - The line height of the text. Defaults to 'normal'.
+ * @param {TextTracking} tracking - The letter spacing of the text. Defaults to 'normal'.
+ * @param {TextWeight} weight - The weight of the text. Defaults to 'normal'.
+ * @param {TextStyle} textStyle - The style of the text. Defaults to 'normal'.
+ * @param {clamp} clamp - The number of lines to clamp the text to. Defaults to 'none'.
+ * @param {TextAlign} align - The alignment of the text. Defaults to 'left'.
+ * @param {TextDecor} decor - The decoration of the text. Defaults to 'none'.
+ * @param {TextTransform} transform - The transformation of the text. Defaults to 'none'.
+ * @param {offset} offset - The outline offset of the text. Defaults to '0'.
+ * @param {TextColor} color - The color of the text. Defaults to 'blue-gray-600'.
+ * @return {JSX.Element} The rendered styled text component.
+ */
+
 const SFText: React.FC<SFTextProps> = ({
   children,
   as,

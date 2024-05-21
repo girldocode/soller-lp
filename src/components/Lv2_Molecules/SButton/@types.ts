@@ -4,11 +4,17 @@ export type ButtonVariant = "contained" | "text";
 export type ButtonSize = "sm" | "lg";
 export type ButtonColor = Color;
 
-export type SButtonProps = {
+interface _Common extends React.HTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  variant: ButtonVariant;
   size: ButtonSize;
   color?: ButtonColor;
   IconStart?: React.ReactNode;
   IconEnd?: React.ReactNode;
-} & React.HTMLAttributes<HTMLButtonElement>;
+}
+
+export type TextButtonProps = Omit<_Common, "size">;
+export type ContainedButtonProps = _Common;
+
+export type SButtonProps = {
+  variant: ButtonVariant;
+} & (TextButtonProps & ContainedButtonProps);
