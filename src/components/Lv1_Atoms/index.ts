@@ -1,1 +1,1 @@
-export { default as SFText } from "./SFText/SFText";
+export { default as SText } from "./SText/SText";

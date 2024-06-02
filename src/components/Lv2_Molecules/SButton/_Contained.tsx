@@ -1,5 +1,5 @@
-import { SFText } from "@/components/Lv1_Atoms";
-import { TextSize } from "@/components/Lv1_Atoms/SFText/@types";
+import { SText } from "@/components/Lv1_Atoms";
+import { TextSize } from "@/components/Lv1_Atoms/SText/@types";
 import { cn } from "@/utils";
 import { ButtonColor, ButtonSize, ContainedButtonProps } from "./@types";
 
@@ -18,10 +18,13 @@ const ContainedButton: React.FC<ContainedButtonProps> = ({
     "amber-300": "bg-amber-300",
     "amber-500": "bg-amber-500",
     "amber-900": "bg-amber-900",
+    "amber-600": "bg-amber-600",
     "blue-light-100": "bg-blue-light-100",
     "blue-light-200": "bg-blue-light-200",
     "blue-light-300": "bg-blue-light-300",
+    "blue-light-700": "bg-blue-light-700",
     "purple-500": "bg-purple-500",
+    "purple-900": "bg-purple-900",
   };
 
   // size
@@ -44,16 +47,16 @@ const ContainedButton: React.FC<ContainedButtonProps> = ({
   const classes = cn(
     generalStyling,
     sizeVariants[size],
-    colorVariants[color || "amber-500"],
+    colorVariants[color || "amber-300"],
     props.className
   );
 
   return (
     <button className={classes} {...props}>
       {IconStart ?? null}
-      <SFText as="p" size={TextVariants[size]} color="amber-900">
+      <SText as="p" size={TextVariants[size]} weight="bold" color="amber-900">
         {children}
-      </SFText>
+      </SText>
       {IconEnd ?? null}
     </button>
   );

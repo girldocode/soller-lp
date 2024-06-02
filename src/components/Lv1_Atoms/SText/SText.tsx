@@ -2,7 +2,7 @@ import { cn } from "@/utils";
 import {
   clamp,
   offset,
-  SFTextProps,
+  STextProps,
   TextAlign,
   TextColor,
   TextDecor,
@@ -33,7 +33,7 @@ import {
  * @return {JSX.Element} The rendered styled text component.
  */
 
-const SFText: React.FC<SFTextProps> = ({
+const SFText: React.FC<STextProps> = ({
   children,
   as,
   size,
@@ -59,8 +59,10 @@ const SFText: React.FC<SFTextProps> = ({
     xl: "text-xl", // 20px
     "2xl": "text-2xl", // 24px
     "3xl": "text-3xl", // 30px
+    "2rem": "text-[2rem]",
     "4xl": "text-4xl", // 36px
     "5xl": "text-5xl", // 48px
+    "3.5rem": "text-[3.5rem]",
     "6xl": "text-6xl", // 60px
     "7xl": "text-7xl", // 72px
     "8xl": "text-8xl", // 96px
@@ -157,11 +159,14 @@ const SFText: React.FC<SFTextProps> = ({
     "blue-gray-900": "text-blue-gray-900",
     "amber-300": "text-amber-300",
     "amber-500": "text-amber-500",
+    "amber-600": "text-amber-600",
     "amber-900": "text-amber-900",
     "blue-light-100": "text-blue-light-100",
     "blue-light-200": "text-blue-light-200",
     "blue-light-300": "text-blue-light-300",
+    "blue-light-700": "text-blue-light-700",
     "purple-500": "text-purple-500",
+    "purple-900": "bg-purple-900",
   };
 
   const classes = cn(
